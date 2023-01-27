@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @apply bg-light-bg dark:bg-dark-bg;
+  @apply bg-light-bg dark:bg-dark-bg duration-300;
   @apply text-light-text dark:text-dark-text;
 }
 

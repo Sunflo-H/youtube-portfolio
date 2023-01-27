@@ -7,7 +7,6 @@ import NavItem from "./NavItem";
 
 export default function Nav() {
   const [nav, setNav] = useState("Home");
-  // const [isActive, setIsActive] = useState(false);
 
   const arr = [
     "Home",
@@ -22,7 +21,7 @@ export default function Nav() {
 
   const handleClick = (e) => {
     const value = e.currentTarget.innerText.replace(" ", "");
-    let url = `/${value}`;
+    let url = `/`;
     switch (value) {
       case "Trending":
       case "Subscriptions":
@@ -39,7 +38,7 @@ export default function Nav() {
     navigate(url);
   };
   return (
-    <div className="w-24 h-screen bg-youtube py-6 text-white">
+    <div className="w-24 bg-youtube py-6 text-white">
       {arr.map((value, index) => (
         <NavItem
           onClick={handleClick}

@@ -2,25 +2,10 @@ import React, { useContext, useEffect } from "react";
 import { BsYoutube, BsSunFill, BsMoonFill, BsSearch } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { DarkModeContext } from "../../context/DarkModeContext";
+import DarkMode from "./DarkMode";
 
 export default function Header() {
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const navigate = useNavigate();
-  useEffect(() => {
-    if (darkMode) localStorage.theme = "dark";
-    else localStorage.theme = "light";
-
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
-
   return (
     <div className="flex justify-between px-4 py-6 border-b border-light-calloutbg">
       {/* 로고 */}
@@ -47,16 +32,7 @@ export default function Header() {
       </form>
 
       {/* 다크모드 */}
-      <div
-        className="flex items-center p-2 cursor-pointer"
-        onClick={toggleDarkMode}
-      >
-        {darkMode ? (
-          <BsMoonFill className="text-xl text-dark-text " />
-        ) : (
-          <BsSunFill className="text-xl text-light-text" />
-        )}
-      </div>
+      <DarkMode />
     </div>
   );
 }
