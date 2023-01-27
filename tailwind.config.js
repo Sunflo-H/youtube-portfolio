@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      roboto: ["roboto"],
+    },
     extend: {
       colors: {
         brown: {
@@ -20,6 +23,7 @@ module.exports = {
         youtube: "#ff0000",
         dark: {
           bg: "hsl(0, 0%, 0%)",
+          logo: "hsl(0, 0%, 90%)",
           text: "hsl(0, 0%, 80%)",
           subheader: "hsl(0, 0%, 60%)",
           paragraph: "hsl(0, 0%, 80%)",
@@ -27,6 +31,7 @@ module.exports = {
         },
         light: {
           bg: "hsl(0, 0%, 100%)",
+          logo: "hsl(0, 0%, 10%)",
           text: "hsl(0, 0%, 20%)",
           subheader: "hsl(0, 0%, 40%)",
           paragraph: "hsl(0, 0%, 20%)",

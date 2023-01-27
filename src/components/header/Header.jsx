@@ -1,9 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import { BsYoutube, BsSunFill, BsMoonFill, BsSearch } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 import { DarkModeContext } from "../../context/DarkModeContext";
 
 export default function Header() {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const navigate = useNavigate();
   useEffect(() => {
     if (darkMode) localStorage.theme = "dark";
     else localStorage.theme = "light";
@@ -22,9 +24,14 @@ export default function Header() {
   return (
     <div className="flex justify-between px-4 py-6 border-b border-light-calloutbg">
       {/* 로고 */}
-      <div className=" flex items-center">
+      <div
+        className=" flex items-center cursor-pointer font-roboto"
+        onClick={() => navigate("/")}
+      >
         <BsYoutube className="text-youtube text-2xl mr-1" />
-        <span className="text-xl font-semibold">Youtube</span>
+        <span className="text-xl font-semibold tracking-tight text-light-logo dark:text-dark-logo">
+          YouTube
+        </span>
       </div>
 
       {/* 검색 */}

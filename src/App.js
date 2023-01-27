@@ -9,8 +9,10 @@ function App() {
     <>
       <DarkModeProvider>
         <Header />
-        <Nav />
-        <Outlet />
+        <div className="flex">
+          <Nav />
+          <Outlet />
+        </div>
       </DarkModeProvider>
     </>
   );

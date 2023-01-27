@@ -9,51 +9,36 @@ import {
 import { FaHistory } from "react-icons/fa";
 import { CgPlayList } from "react-icons/cg";
 
-export default function NavItem({ onClick, nav, value, index }) {
-  //   const arr = [AiFillHome, HiFire, MdSubscriptions, History, Watch];
+export default function NavItem({ onClick, nav, value }) {
+  const arr = {
+    Home: AiFillHome,
+    Trending: HiFire,
+    Subscriptions: MdSubscriptions,
+    History: FaHistory,
+    "Watch Later": MdAccessTimeFilled,
+    "Liked Videos": CgPlayList,
+  };
+
   return (
     <>
-      {nav === value ? (
+      {nav === value.replace(" ", "") ? (
         <div
           className={`${
-            index === 3 && "mt-10"
+            value === "History" && "mt-10"
           } bg-white text-youtube text-center py-2 cursor-pointer`}
           onClick={onClick}
         >
-          {value === "Home" && <AiFillHome className="text-3xl m-auto" />}
-          {value === "Trending" && <HiFire className="text-3xl m-auto" />}
-          {value === "Subscriptions" && (
-            <MdSubscriptions className="text-3xl m-auto" />
-          )}
-          {value === "History" && <FaHistory className="text-3xl m-auto" />}
-          {value === "Watch Later" && (
-            <MdAccessTimeFilled className="text-3xl m-auto" />
-          )}
-          {value === "Liked Videos" && (
-            <CgPlayList className="text-3xl m-auto" />
-          )}
-
+          {React.createElement(arr[value], { className: "text-2xl m-auto" })}
           <span className="text-sm font-bold">{value}</span>
         </div>
       ) : (
         <div
           className={`${
-            index === 3 && "mt-10"
+            value === "History" && "mt-10"
           } text-center py-2 cursor-pointer`}
           onClick={onClick}
         >
-          {value === "Home" && <AiFillHome className="text-3xl m-auto" />}
-          {value === "Trending" && <HiFire className="text-3xl m-auto" />}
-          {value === "Subscriptions" && (
-            <MdSubscriptions className="text-3xl m-auto" />
-          )}
-          {value === "History" && <FaHistory className="text-3xl m-auto" />}
-          {value === "Watch Later" && (
-            <MdAccessTimeFilled className="text-3xl m-auto" />
-          )}
-          {value === "Liked Videos" && (
-            <CgPlayList className="text-3xl m-auto" />
-          )}
+          {React.createElement(arr[value], { className: "text-2xl m-auto" })}
           <span className="text-sm ">{value}</span>
         </div>
       )}
