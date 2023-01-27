@@ -12,8 +12,8 @@ body {
 
   -ms-overflow-style: none;
 
-  @apply bg-light-bg dark:bg-dark-bg duration-300;
-  @apply text-light-text dark:text-dark-text;
+  @apply bg-light-bg-100 dark:bg-dark-bg-100  duration-300;
+  @apply text-light-fg-100 dark:text-dark-fg-100;
 }
 
 code {

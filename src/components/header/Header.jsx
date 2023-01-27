@@ -20,7 +20,7 @@ export default function Header() {
       </div>
 
       {/* 검색 */}
-      <form className="flex w-full max-w-lg border border-gray-400 rounded-2xl">
+      <form className="flex w-full max-w-lg border border-dark-fg-10 rounded-2xl">
         <input
           className="w-11/12 h-full ml-4 outline-none"
           type="text"
