@@ -38,7 +38,7 @@ export default function Nav() {
     navigate(url);
   };
   return (
-    <div className="w-24 bg-youtube py-6 text-white">
+    <div className="fixed w-24 h-screen bg-youtube mt-20 py-6 text-white">
       {arr.map((value, index) => (
         <NavItem
           onClick={handleClick}

@@ -7,7 +7,7 @@ import DarkMode from "./DarkMode";
 export default function Header() {
   const navigate = useNavigate();
   return (
-    <div className="flex justify-between px-4 py-6 border-b border-light-calloutbg">
+    <div className="fixed flex justify-between w-full h-20 px-4 py-6 bg-white border-b border-light-calloutbg dark:bg-black dark:border-dark-calloutbg ">
       {/* 로고 */}
       <div
         className=" flex items-center cursor-pointer font-roboto"

@@ -14,10 +14,13 @@ export default function RecentlyVideos() {
 
   return (
     <>
-      <h1 className="text-2xl">Recently Videos</h1>
-      {videos && <Videos videos={videos} />}
-
-      <button>SHOW MORE</button>
+      {videos && (
+        <>
+          <h1 className="text-2xl mb-8">Recently Added</h1>
+          <Videos videos={videos} />
+          <button>SHOW MORE</button>
+        </>
+      )}
     </>
   );
 }

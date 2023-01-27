@@ -25,11 +25,11 @@ export default function NavItem({ onClick, nav, value }) {
         <div
           className={`${
             value === "History" && "mt-10"
-          } bg-white text-youtube text-center py-2 cursor-pointer`}
+          } bg-white dark:bg-dark-bg  text-youtube text-center py-2 cursor-pointer`}
           onClick={onClick}
         >
           {React.createElement(arr[value], { className: "text-2xl m-auto" })}
-          <span className="text-sm font-bold">{value}</span>
+          <span className="text-sm font-bold dark:text-white">{value}</span>
         </div>
       ) : (
         <div

@@ -10,6 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  -ms-overflow-style: none;
+
   @apply bg-light-bg dark:bg-dark-bg duration-300;
   @apply text-light-text dark:text-dark-text;
 }
@@ -17,4 +19,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

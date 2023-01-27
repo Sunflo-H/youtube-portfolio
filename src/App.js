@@ -14,7 +14,9 @@ function App() {
           <Header />
           <div className="flex">
             <Nav />
-            <Outlet />
+            <div className="mt-20 ml-24 px-14 py-6">
+              <Outlet />
+            </div>
           </div>
         </QueryClientProvider>
       </DarkModeProvider>
